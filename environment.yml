@@ -1,0 +1,34 @@
+# Environment used for all notebooks (Python 3.10, PyTorch 2.6.0 built for CUDA 12.4).
+#   conda env create -f environment.yml
+#   conda activate ecg-fm-repeatability
+#   python -m ipykernel install --user --name ecg-fm-repeatability
+# On a computer without an NVIDIA graphics card, replace the line with --extra-index-url by nothing: pip then installs the CPU build of PyTorch.
+# The notebooks for data, analysis, tables and figures (01, 02, 05, 07, 08) run without a graphics card.
+name: ecg-fm-repeatability
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu124
+      - torch==2.6.0
+      - numpy==2.2.6
+      - pandas==2.3.3
+      - scipy==1.15.3
+      - scikit-learn==1.7.2
+      - matplotlib==3.10.9
+      - h5py==3.16.0
+      - wfdb==4.3.1
+      - neurokit2==0.2.13
+      - transformers==4.46.3
+      - safetensors==0.8.0
+      - tokenizers==0.20.3
+      - huggingface-hub==0.36.2
+      - tqdm==4.70.1
+      - requests==2.34.2
+      - joblib==1.6.0
+      - jinja2==3.1.6
+      - jupyterlab==4.6.4
+      - ipykernel==7.3.0
+      - nbconvert==7.17.2

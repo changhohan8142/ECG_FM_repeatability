@@ -1,0 +1,22 @@
+# Versions used for the paper (Python 3.10). Install PyTorch first, for the CUDA version of your computer, for example:
+#   pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+#   pip install -r requirements.txt
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+matplotlib==3.10.9
+h5py==3.16.0
+wfdb==4.3.1
+neurokit2==0.2.13
+transformers==4.46.3
+safetensors==0.8.0
+tokenizers==0.20.3
+huggingface-hub==0.36.2
+tqdm==4.70.1
+requests==2.34.2
+joblib==1.6.0
+jinja2==3.1.6
+jupyterlab==4.6.4
+ipykernel==7.3.0
+nbconvert==7.17.2

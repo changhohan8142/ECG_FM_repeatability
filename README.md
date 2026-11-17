@@ -81,15 +81,11 @@ Disk space: about 80 GB of raw data and 60 GB of cached arrays when only the MIM
 
 No code or weights of these projects are copied into this repository. Fine-tuned models are written to `MASTER/models/finetuned` by notebook 03 and are read from there by the later notebooks.
 
-## Reproducibility
+## Notes
 
-- Sets are drawn with fixed seeds, so that notebook 02 gives the same training pool and evaluation sets every time.
-- Training uses fixed seeds, but results on a graphics card are not bit-identical between runs or computers. Small differences in the last digits are to be expected.
-- Confidence intervals come from a bootstrap with a fixed seed (`BOOT_SEED` in notebook 00). The intervals in the paper were calculated with other resamples of the same kind,
-  so limits can differ in the last digit from those printed in the paper; point estimates do not depend on the resamples.
+- Results obtained with this code can differ slightly from those reported in the paper, because the random seeds are not identical.
 - Hardware used: one NVIDIA RTX 3080 (10 GB). Fine-tuning one model takes 3–46 min; the 58 fine-tuned models of the paper take about 14 h of GPU time.
   Notebooks 03, 04 and 06 need a graphics card; the others run on a processor.
-- The time to read a single segment (notebook 06) is limited by the processor rather than by the graphics card, and it depends on which processor cores the process runs on.
 - The notebooks are stored without outputs.
 
 ## Repository layout
